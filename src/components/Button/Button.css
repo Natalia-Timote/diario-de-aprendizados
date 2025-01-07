@@ -1,0 +1,16 @@
+.button {
+    font-weight: 700;
+    margin: 16px;
+    padding: 8px 16px;
+    border: 1px solid #3D3D3D;
+    border-radius: 8px;
+    background-color: #F5ECD5;
+    font-family: "Open Sans", serif;
+    font-size: 16px;
+    color: #578E7E;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #3D3D3D;
+}

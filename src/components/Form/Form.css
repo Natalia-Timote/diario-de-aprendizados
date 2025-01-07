@@ -1,0 +1,13 @@
+.form {
+    background-color: #F5ECD5;
+    margin: 40px 160px;
+    border-radius: 16px;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.04);
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.form h2 {
+    text-align: center;
+    padding: 0 16px 0 16px;
+}

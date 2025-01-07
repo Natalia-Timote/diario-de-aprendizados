@@ -1,0 +1,15 @@
+.input {
+    color: #3D3D3D;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 8px;
+}
+
+.input input {
+    color: #3D3D3D;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.04);
+}
