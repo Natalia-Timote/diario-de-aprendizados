@@ -1,0 +1,30 @@
+.footer-infos {
+    padding: 8px 16px 8px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #578E7E;
+}
+
+.footer-infos .footer-list {
+    display: flex;
+    gap: 4px;
+}
+
+.footer-infos .footer-list ul {
+    list-style-type: none;
+}
+
+.footer-infos .footer-list img {
+    height: 24px;
+}
+
+.footer-infos .footer-logo .logo {
+    font-size: 2em;
+    color: #FFF;
+}
+
+.footer-infos .footer-dev {
+    font-size: 16px;
+    color: #FFF;
+}

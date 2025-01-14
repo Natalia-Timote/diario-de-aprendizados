@@ -1,0 +1,40 @@
+.learning-card {
+    width: 280px;
+}
+
+.learning-card .header {
+    width: 280px;
+    border-radius: 8px 8px 0 0;
+}
+
+.learning-card img {
+    width: 180px;
+    border-radius: 25%;
+    position: relative;
+    bottom: -48px;
+}
+
+.learning-card .footer {
+    width: 280px;
+    background: #FFFFFF;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 0px 0px 8px 8px;
+    padding-top: 40px;
+    padding-bottom: 16px;
+}
+
+.learning-card .footer h4 {
+    color: #6278F7;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.learning-card .footer h5,
+.learning-card .footer p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #212121;
+    padding: 0 16px;
+}
