@@ -51,6 +51,10 @@ function App() {
     setLearnings([...learnings, learning])
   }
 
+  const deleteLearning = () => {
+    console.log("Deletando.");
+  }
+
   return (
     <div className="App">
       <Home />
@@ -62,6 +66,7 @@ function App() {
         primaryColor={theme.primaryColor}
         secondaryColor={theme.secondaryColor}
         learnings={learnings.filter(learning => learning.theme === theme.title)}
+        whenDeleting={deleteLearning}
       />)}
 
       <Footer />

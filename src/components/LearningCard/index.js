@@ -1,8 +1,10 @@
+import { RiCloseCircleFill } from "react-icons/ri";
 import "./LearningCard.css";
 
-const LearningCard = ({ img, title, description, languageOrTool, backgroundColor }) => {
+const LearningCard = ({ img, title, description, languageOrTool, backgroundColor, whenDeleting }) => {
     return (
         <div className="learning-card">
+            <RiCloseCircleFill size={24} className="delete" onClick={whenDeleting} />
             <div className="header" style={{ backgroundColor: backgroundColor }}>
                 <img src={img} alt={title} />
             </div>
