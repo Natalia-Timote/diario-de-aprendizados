@@ -16,3 +16,8 @@
     margin-top: 32px;
     flex-wrap: wrap;
 }
+
+.theme .change-color {
+    position: absolute;
+    right: 48px;
+}

@@ -1,20 +1,19 @@
 import LearningCard from "../LearningCard";
 import "./Theme.css";
+import hexToRgba from 'hex-to-rgba';
 
-const Theme = (props) => {
+const Theme = ( { theme, learnings, whenDeleting, changeColor }) => {
     return (
-        (props.learnings.length > 0) && <section className="theme" style={{ backgroundColor: props.secondaryColor }}>
-            <h3 style={{ borderColor: props.primaryColor }}>{props.title}</h3>
+        (learnings.length > 0) && <section className="theme" style={{ backgroundColor: hexToRgba(theme.color, '0.5') }}>
+            <input type="color" onChange={event => changeColor(event.target.value, theme.id)} value={theme.color} className="change-color" />
+            <h3 style={{ borderColor: theme.color }}>{theme.title}</h3>
             <div className="theme-learning-card">
-                {props.learnings.map(learning => {
+                {learnings.map((learning, indice) => {
                     return <LearningCard 
-                        key={learning.title} 
-                        backgroundColor={props.primaryColor} 
-                        title={learning.title} 
-                        description={learning.description} 
-                        languageOrTool={learning.languageOrTool} 
-                        img={learning.img} 
-                        whenDeleting={props.whenDeleting}
+                        key={indice} 
+                        learning={learning}
+                        backgroundColor={theme.color}  
+                        whenDeleting={whenDeleting}
                     />
                 })}
             </div>

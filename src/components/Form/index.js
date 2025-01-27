@@ -3,7 +3,7 @@ import Button from "../Button";
 import DropdownList from "../DropdownList";
 import Input from "../Input";
 import "./Form.css";
-
+import { v4 as uuidv4 } from 'uuid';
 
 const Form = (props) => {
 
@@ -12,15 +12,19 @@ const Form = (props) => {
     const [languageOrTool, setlanguageOrTool] = useState("");
     const [img, setImg] = useState("");
     const [theme, setTheme] = useState("");
-    
+    const [themeName, setThemeName] = useState("");
+    const [themeColor, setThemeColor] = useState("");
+
+
     const whenSaving = (event) => {
         event.preventDefault();
         props.whenRecordingLearning({
+            id: uuidv4(),
             title,
             description,
             languageOrTool,
             img,
-            theme
+            theme,
         })
         setTitle("");
         setDescription("");
@@ -29,10 +33,20 @@ const Form = (props) => {
         setTheme("");
     }
 
+    const whenSavingTheme = (event) => {
+        event.preventDefault();
+        props.whenRecordingTheme({
+            title: themeName,
+            color: themeColor,
+        })
+        setThemeName("");
+        setThemeColor("");
+    }
+
     return (
         <section className="form">
             <form onSubmit={whenSaving}>
-                <h2>Insira as informações nos campos abaixo para registrar mais um aprendizado</h2>
+                <h2>Criar novo aprendizado</h2>
                 <Input
                     required={true}
                     label="Título" 
@@ -66,6 +80,26 @@ const Form = (props) => {
                     themes={props.themes} 
                     enteredValue={theme}
                     toTheChanged={enteredValue => setTheme(enteredValue)}
+                />
+                <Button>Enviar</Button>
+            </form>
+
+            <form onSubmit={whenSavingTheme}>
+                <h2>Criar novo tema de estudo</h2>
+                <Input
+                    required={true}
+                    label="Tema" 
+                    placeholder="Insira o tema" 
+                    enteredValue={themeName}
+                    toTheChanged={enteredValue => setThemeName(enteredValue)}
+                />
+               
+                <Input
+                    required={true} 
+                    label="Cor" 
+                    placeholder="Insira a cor do tema" 
+                    enteredValue={themeColor}
+                    toTheChanged={enteredValue => setThemeColor(enteredValue)}
                 />
                 <Button>Enviar</Button>
             </form>

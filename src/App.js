@@ -3,72 +3,87 @@ import Form from "./components/Form";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Theme from "./components/Theme";
+import { v4 as uuidv4 } from 'uuid';
 
 function App() {
 
-  const themes = [
+  const [themes, setThemes] = useState([
     {
+      id: uuidv4(),
       title: 'Programação',
-      primaryColor: '#57C278',
-      secondaryColor: '#D9F7E9'
+      color: '#57C278'
     },
     {
+      id: uuidv4(),
       title: 'Front-End',
-      primaryColor: '#82CFFA',
-      secondaryColor: '#E8F8FF'
+      color: '#82CFFA'
     },
     {
+      id: uuidv4(),
       title: 'Data Science',
-      primaryColor: '#A6D157',
-      secondaryColor: '#F0F8E2'
+      color: '#A6D157'
     },
     {
+      id: uuidv4(),
       title: 'Devops',
-      primaryColor: '#E06B69',
-      secondaryColor: '#FDE7E8'
+      color: '#E06B69'
     },
     {
+      id: uuidv4(),
       title: 'UX & Design',
-      primaryColor: '#D86EBF',
-      secondaryColor: '#FAE5F5'
+      color: '#D86EBF'
     },
     {
+      id: uuidv4(),
       title: 'Mobile',
-      primaryColor: '#FEBA05',
-      secondaryColor: '#FFF5D9'
+      color: '#FEBA05'
     },
     {
+      id: uuidv4(),
       title: 'Inovação e gestão',
-      primaryColor: '#FF8A29',
-      secondaryColor: '#FFEEDF'
+      color: '#FF8A29'
     },
-  ];
+  ]);
 
   const [learnings, setLearnings] = useState([]);
 
-  const toTheAddedLearning = (learning) => {
-    console.log(learning);
-    setLearnings([...learnings, learning])
+  const deleteLearning = (id) => {
+    setLearnings(learnings.filter(learning => learning.id !== id));
   }
 
-  const deleteLearning = () => {
-    console.log("Deletando.");
+  const changeLearningCardColor = (color, id) => {
+    setThemes(themes.map(theme => {
+      if(theme.id === id) {
+        theme.color = color;
+      }
+      return theme;
+    }))
+  }
+
+  const newTheme = (addTheme) => {
+    setThemes([...themes, { ...addTheme, id: uuidv4() }]);
   }
 
   return (
     <div className="App">
       <Home />
-      <Form themes={themes.map(theme => theme.title)} whenRecordingLearning={learning => toTheAddedLearning(learning)} />
-      
-      {themes.map(theme => <Theme 
-        key={theme.title}
-        title={theme.title}
-        primaryColor={theme.primaryColor}
-        secondaryColor={theme.secondaryColor}
-        learnings={learnings.filter(learning => learning.theme === theme.title)}
-        whenDeleting={deleteLearning}
-      />)}
-
+      <Form 
+        themes={themes.map(theme => theme.title)} 
+        whenRecordingLearning={learning => setLearnings([...learnings, learning])} 
+        whenRecordingTheme={newTheme} 
+      />
+      <section className="themes">
+        <h1>Aprendizados por temas</h1>
+        {themes.map((theme, indice) => 
+          <Theme 
+            key={indice}
+            theme={theme}
+            learnings={learnings.filter(learning => learning.theme === theme.title)}
+            whenDeleting={deleteLearning}
+            changeColor={changeLearningCardColor}
+          />
+        )}
+      </section>
       <Footer />
 
     </div>
