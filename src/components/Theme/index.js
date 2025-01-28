@@ -2,7 +2,7 @@ import LearningCard from "../LearningCard";
 import "./Theme.css";
 import hexToRgba from 'hex-to-rgba';
 
-const Theme = ( { theme, learnings, whenDeleting, changeColor }) => {
+const Theme = ( { theme, learnings, whenDeleting, changeColor, whenFavorite }) => {
     return (
         (learnings.length > 0) && <section className="theme" style={{ backgroundColor: hexToRgba(theme.color, '0.5') }}>
             <input type="color" onChange={event => changeColor(event.target.value, theme.id)} value={theme.color} className="change-color" />
@@ -14,6 +14,7 @@ const Theme = ( { theme, learnings, whenDeleting, changeColor }) => {
                         learning={learning}
                         backgroundColor={theme.color}  
                         whenDeleting={whenDeleting}
+                        whenFavorite={whenFavorite}
                     />
                 })}
             </div>

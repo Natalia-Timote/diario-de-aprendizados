@@ -64,6 +64,13 @@ function App() {
     setThemes([...themes, { ...addTheme, id: uuidv4() }]);
   }
 
+  const favoriteCard = (id) => {
+    setLearnings(learnings.map(learning => {
+      if(learning.id === id) learning.favorite = !learning.favorite;
+      return learning;
+    }))
+  }
+
   return (
     <div className="App">
       <Home />
@@ -81,6 +88,7 @@ function App() {
             learnings={learnings.filter(learning => learning.theme === theme.title)}
             whenDeleting={deleteLearning}
             changeColor={changeLearningCardColor}
+            whenFavorite={favoriteCard}
           />
         )}
       </section>

@@ -20,6 +20,7 @@ const Form = (props) => {
         event.preventDefault();
         props.whenRecordingLearning({
             id: uuidv4(),
+            favorite: false,
             title,
             description,
             languageOrTool,
