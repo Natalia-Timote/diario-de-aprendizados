@@ -13,3 +13,8 @@
     border-radius: 8px;
     box-shadow: 4px 4px rgba(0, 0, 0, 0.04);
 }
+
+.input .input-color input {
+    height: 80px;
+    padding: 8px 24px;
+}

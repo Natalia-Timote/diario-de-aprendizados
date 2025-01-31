@@ -98,6 +98,7 @@ const Form = (props) => {
                 <Input
                     required={true} 
                     label="Cor" 
+                    type="color"
                     placeholder="Insira a cor do tema" 
                     enteredValue={themeColor}
                     toTheChanged={enteredValue => setThemeColor(enteredValue)}

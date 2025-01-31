@@ -1,4 +1,6 @@
 .footer-infos {
+    margin-top: 24px;
+    height: 72px;
     padding: 8px 16px 8px 16px;
     display: flex;
     justify-content: space-between;
@@ -20,11 +22,13 @@
 }
 
 .footer-infos .footer-logo .logo {
-    font-size: 2em;
-    color: #FFF;
+    height: 80px;
+    width: auto;
 }
 
 .footer-infos .footer-dev {
-    font-size: 16px;
+    width: 360px;
+    text-align: center;
+    font-size: 12px;
     color: #FFF;
 }

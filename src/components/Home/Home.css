@@ -1,8 +1,15 @@
-.home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #578E7E;
+.home .banner {
     width: 100%;
-    height: 240px;
+    height: auto;
+}
+
+.home .arrow-down {
+    color: #578E7E;
+    font-size: 48px;
+    position: absolute;
+    left: 460px;
+    bottom: 120px;
+    border-radius: 50%;
+    border: 2px solid #578E7E;
+    cursor: pointer;
 }

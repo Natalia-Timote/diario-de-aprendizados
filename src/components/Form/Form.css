@@ -1,10 +1,17 @@
 .form {
-    background-color: #F5ECD5;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    background-color: #F0EAEA;
     margin: 40px 160px;
     border-radius: 16px;
     box-shadow: 4px 4px rgba(0, 0, 0, 0.04);
     padding-top: 24px;
     padding-bottom: 24px;
+}
+
+.form form {
+    flex: 1;
 }
 
 .form h2 {

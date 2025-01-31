@@ -1,5 +1,4 @@
 import "./Footer.css";
-import Logo from "../Logo";
 
 const Footer = () => {
     return (
@@ -17,10 +16,10 @@ const Footer = () => {
                 </ul>
             </div>
             <div className="footer-logo">
-                <Logo />
+                <img src="../images/logo.png" className="logo" alt="Logo do Diário de Aprendizados" />
             </div>
             <div className="footer-dev">
-                <p>Desenvolvido durante curso da Alura. Por Natalia Timote.</p>
+                <p>Desenvolvido por Natalia Timote através de curso da Alura. Imagens: Canva</p>
             </div>
         </section>
     )

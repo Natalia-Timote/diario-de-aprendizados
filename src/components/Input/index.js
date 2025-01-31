@@ -1,15 +1,21 @@
 import "./Input.css";
 
-const Input = (props) => {
+const Input = ({ type = "text", toTheChanged, label, enteredValue, required, placeholder }) => {
 
     const whenTyped = (event) => {
-        props.toTheChanged(event.target.value);
+        toTheChanged(event.target.value);
     }
 
     return (
-        <div className="input">
-            <label>{props.label}</label>
-            <input value={props.enteredValue} onChange={whenTyped} required={props.required} placeholder={props.placeholder}></input>
+        <div className={`input input-${type}`}>
+            <label>{label}</label>
+            <input 
+                type={type} 
+                value={enteredValue} 
+                onChange={whenTyped} 
+                required={required} 
+                placeholder={placeholder}
+            />
         </div>
     )
 }
