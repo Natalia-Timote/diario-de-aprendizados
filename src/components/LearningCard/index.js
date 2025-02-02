@@ -21,7 +21,7 @@ const LearningCard = ({ backgroundColor, learning, whenDeleting, whenFavorite })
                 onClick={() => whenDeleting(learning.id)}
             />
             <div className="header" style={{ backgroundColor: backgroundColor }}>
-                <img src={learning.image} alt={learning.title} />
+                <img src={learning.img} alt={learning.title} />
             </div>
             <div className="footer">
                 <h4>{learning.title}</h4>
