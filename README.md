@@ -47,14 +47,20 @@ Interface principal para registrar e visualizar os aprendizados.
 
 **✍️ Cadastro de Aprendizados**
 
-Formulário para adicionar um novo aprendizado, incluindo título, descrição, linguagem ou ferramenta, imagem e tema.
+Formulário para adicionar um novo aprendizado e/ou um novo tema de estudo.
 
-![Tela de cadastro dos aprendizados](public/images/diario-de-aprendizados-form.png)
+![Tela de cadastro dos aprendizados e temas de estudo](public/images/diario-de-aprendizados-form.png)
 
 **📚 Organização por Temas**
 
-Exemplos dos aprendizados organizados por temática, com cores distintas para cada tema.
+Exemplo dos aprendizados organizados por temática, com cores distintas para cada tema.
 
 ![Tela de aprendizados em Front-End](public/images/diario-de-aprendizados-front-end.png)
-![Tela de aprendizados em Ux & Design](public/images/diario-de-aprendizados-ux.png)
+
+**📚 Mudança de cor de um tema**
+
+Exemplo de alteração de cor de um mesmo tema.
+
+![Tela de aprendizados em Ux & Design](public/images/diario-de-aprendizados-ux-1.png)
+![Tela de aprendizados em Ux & Design](public/images/diario-de-aprendizados-ux-2.png)
 
