@@ -16,8 +16,6 @@ A ferramenta permite que você registre e organize os principais aprendizados ad
 
 ## 📚 Objetivos do Curso
 
-**👉 React: desenvolvendo com JavaScript**
-
 * Descrever as vantagens da utilização do **React**;
 * Implementar **componentes reativos**;
 * Investigar e analisar **mensagens de erro**;
@@ -43,24 +41,23 @@ O projeto está disponível para visualização na **Vercel**. Clique no link ab
 
 Interface principal para registrar e visualizar os aprendizados.
 
-![Tela inicial](public/images/diario-de-aprendizados-home.png)
+<img src="public/images/diario-de-aprendizados-home.png" alt="Tela Inicial" width="600"/>
 
 **✍️ Cadastro de Aprendizados**
 
 Formulário para adicionar um novo aprendizado e/ou um novo tema de estudo.
 
-![Tela de cadastro dos aprendizados e temas de estudo](public/images/diario-de-aprendizados-form.png)
+<img src="public/images/diario-de-aprendizados-form.png" alt="Cadastro de Aprendizados" width="600"/>
 
 **📚 Organização por Temas**
 
 Exemplo dos aprendizados organizados por temática, com cores distintas para cada tema.
 
-![Tela de aprendizados em Front-End](public/images/diario-de-aprendizados-front-end.png)
+<img src="public/images/diario-de-aprendizados-front-end.png" alt="Organização por Temas" width="600"/>
 
 **📚 Mudança de cor de um tema**
 
 Exemplo de alteração de cor de um mesmo tema.
 
-![Tela de aprendizados em Ux & Design](public/images/diario-de-aprendizados-ux-1.png)
-![Tela de aprendizados em Ux & Design](public/images/diario-de-aprendizados-ux-2.png)
-
+<img src="public/images/diario-de-aprendizados-ux-1.png" alt="Mudança de cor de um tema" width="600"/>
+<img src="public/images/diario-de-aprendizados-ux-2.png" alt="Mudança de cor de um tema" width="600"/>
