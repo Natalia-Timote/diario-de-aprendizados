@@ -59,5 +59,5 @@ Exemplo dos aprendizados organizados por temática, com cores distintas para cad
 
 Exemplo de alteração de cor de um mesmo tema.
 
-<img src="public/images/diario-de-aprendizados-ux-1.png" alt="Mudança de cor de um tema"/>
-<img src="public/images/diario-de-aprendizados-ux-2.png" alt="Mudança de cor de um tema"/>
+<img src="public/images/diario-de-aprendizados-ux-1.png" alt="Mudança de cor de um tema" width="200"/>
+<img src="public/images/diario-de-aprendizados-ux-2.png" alt="Mudança de cor de um tema" width="200"/>
